@@ -26,10 +26,10 @@
             <button @click="pushList">Aggiungi</button>
             <ul v-if="todolist.length>0" >
                 <li v-for="(todo, index) in todolist" :class="(todo.Do) ? 'green' : 'red'">
-                    <span>
+                    <label>
                         <input @click=fatto(index) type="checkbox" :checked="todo.Do">
                         {{todo.Title}}
-                    </span>    
+                    </label>    
                     <span @click="removeFromList(index)"><i class="fas fa-times"></i></span>
                 </li> 
             </ul>
